@@ -29,17 +29,18 @@ fetch('./rafah_on_reitaku.geojson')
         let map = new maplibregl.Map({
             container: 'map', // container id
             style: `https://api.maptiler.com/maps/basic-v2/style.json?key=${MAPTILER_KEY}`,
-            center: [-118.445181, 34.068921], // Reitaku coordinates [lng, lat]
+            center: [-220.046721,35.836155], // Reitaku coordinates [lng, lat]
             zoom: 10 // adjust zoom level as needed
         });
-
+          
+          
         // Add the controls after the map has loaded
         map.on('load', function () {
             // Add the "Zoom to Reitaku" button
             map.addControl(new ButtonControl({
                 text: 'Zoom to Reitaku',
                 title: 'Zoom to Reitaku',
-                eventHandler: () => map.jumpTo({center: [-118.445181, 34.068921], zoom: 10}) // Reitaku coordinates
+                eventHandler: () => map.jumpTo({center: [-220.046721,35.836155], zoom: 10}) // Reitaku coordinates
             }), 'top-right');
 
             // Add the "Zoom to Rafah" button
