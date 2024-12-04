@@ -56,6 +56,12 @@ fetch('./rafah_on_reitaku.geojson')
                 'type': 'geojson',
                 'data': rafahData
             });
+            new maplibregl.Marker()
+                .setLngLat([139.946721, 35.836155]) // Reitaku coordinates
+                .setPopup(new maplibregl.Popup({ offset: 25 }) // add popups
+                .setText('Reitaku University'))
+                .addTo(map);
+
 
             map.addLayer({
                 'id': 'rafah-layer',
